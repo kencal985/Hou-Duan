@@ -8,7 +8,7 @@ public class Map1_1 {
     {
     	this.M=M;
     	this.N=N;
-    	SetStart(N,M);
+    	SetStart();
     }
 	//从数据库中提取数据
 	public void Getdata() {
@@ -22,7 +22,7 @@ public class Map1_1 {
 		
 	}
 	//初始化地图，0为墙
-	public void SetStart(int N,int M) {
+	public void SetStart() {
 		 
 		for(int i=0;i<N;i++)
 		{
@@ -34,7 +34,7 @@ public class Map1_1 {
 		
 	}
    //设置行走的路径
-	public void SetWall(int N) 
+	public void SetWall() 
 	{
 		// TODO Auto-generated method stub
 		for(int i=1;i<N-2;i++)
@@ -51,14 +51,14 @@ public class Map1_1 {
 		
 	}
 	//设置判定点，终点值为-1
-	public void SetFinish(int x,int y)
+	public void SetFinish()
 	{
 		Map1[4][1]=-1;
 	}
 	//设置初始位置
-	public void SetPrepare(int x,int y)
+	public void SetPrepare(int num)
 	{
-		Map1[1][1]=-2;
+		Map1[1][1]=num;
 	}
 	//设置陷阱
 	public void SetDrop()
